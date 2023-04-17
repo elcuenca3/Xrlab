@@ -1,0 +1,110 @@
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card>p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  width: 330px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(23, 6, 63, 0.548);
+  overflow: hidden;
+  margin-left: 110px;
+  margin-top: 45px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(214, 126, 226, 0.534);
+  padding: auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.titulo {
+  order: "ASC";
+}
+
+
+.triangle {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: absolute;
+}
+
+.triangle1 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to left, #0ea1e6, #1e67c7);
+  right: 100px;
+  top: 100px;
+  animation: t1 8s ease infinite;
+}
+
+.triangle2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to left, #ee8105, #c7371e);
+  top: 350px;
+  animation: t2 9s ease infinite;
+}
+
+.triangle3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to left, #1b8fc5, #df0f8f);
+  left: 200px;
+  animation: t3 7s ease infinite;
+}
+
+@keyframes t1 {
+  0% {
+    transform: rotate(45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(45deg) translateY(20px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0px);
+  }
+}
+
+@keyframes t2 {
+  0% {
+    transform: rotate(65deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(65deg) translateY(20px);
+  }
+  100% {
+    transform: rotate(65deg) translateY(0px);
+  }
+}
+
+@keyframes t3 {
+  0% {
+    transform: rotate(45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(45deg) translateY(20px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0px);
+  }
+}

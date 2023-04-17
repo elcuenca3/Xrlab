@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  margin: 50px;
+  background-color: #3535353f;
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  margin: 20px;
+  margin-left: 100px;
+  
+
+}
+.menu > li {
+  background-color: rgba(174, 230, 211, 0.253);
+  border-radius: 10%;
+  color: #ffffff;
+  
+  margin: 25px;
+  padding: 20px;
+  cursor: pointer;
+}
+/* .container.logo{
+    display: flex;
+
+} */
+
+.menu > li:hover {
+  background-color: rgb(0, 34, 97);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.logo {
+  display: inline-flex;
+  padding: 0px 60px;
+}
+
+.circlecontainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height:90%;
+  border-radius: 50%;
+  background-color: #f1c40f; /* Cambia el color de fondo del círculo según tus necesidades */
+}
+
+.circleimage {
+  position: absolute;
+  top: 48%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: 100px; /* Ajusta la altura de la imagen según tus necesidades */
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
