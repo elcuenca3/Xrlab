@@ -5,7 +5,7 @@ import Header from '@/components/Header/header'
 import Styles from '/styles/Home.module.css'
 import { Suspense, useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { Shapes } from "./Shapes";
+// import { Shapes } from "./Shapes";
 import { transition } from "./settings";
 import useMeasure from "react-use-measure";
 
@@ -92,12 +92,12 @@ export default function Home() {
                 <div className="blue blush" />
                 <div className="container">
                   <Suspense fallback={null}>
-                    <Shapes
+                    {/* <Shapes
                       isHover={isHover}
                       isPress={isPress}
                       mouseX={mouseX}
                       mouseY={mouseY}
-                    />
+                    /> */}
                   </Suspense>
                 </div>
               </motion.div>
