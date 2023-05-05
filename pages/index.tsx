@@ -1,14 +1,10 @@
 
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header/header'
-
+import Background from '../components/background/Background'
+import * as THREE from 'three'
 import Styles from '/styles/Home.module.css'
-import { Suspense, useState } from "react";
-import { motion, MotionConfig, useMotionValue } from "framer-motion";
-// import { Shapes } from "./Shapes";
-// import { transition } from "./settings";
-import useMeasure from "react-use-measure";
-
+import { motion } from "framer-motion"
 import Link from 'next/link'
 
 
@@ -31,26 +27,35 @@ const item = {
 
 export default function Home() {
 
-  const [ref, bounds] = useMeasure({ scroll: false });
-  const [isHover, setIsHover] = useState(false);
-  const [isPress, setIsPress] = useState(false);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const resetMousePosition = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
-
-
 
   return (
-
 
     <>
 
       <Header />
+      <motion.div className={Styles.cardcontainer}
+        variants={container}
+        initial="hidden"
+        animate="show">
+        <div className={Styles.box}>
+          <motion.img src="/images/3d.png"
+            alt="Descripción de la imagen"
+            width={400}
+            height={500}
+
+            layoutId="/images/u8e8tuhh.png"
+          />
+
+
+
+        </div>
+      </motion.div>
+
       <main>
+        <div className={Styles.containerbox}>
+          <p>Bienvenido a los entornos inmersivos de Xrlab</p>
+
+        </div>
         <section>
           {/* <h1>Bienvenidos a mi sitio web</h1> */}
           <br></br>
@@ -63,7 +68,7 @@ export default function Home() {
             >
               <Link href="/pantalla">
                 <br></br>
-                <h2>Aventura Espacial</h2>
+                <h2>Card 1</h2>
                 <motion.img src="/images/u8e8tuhh.png"
                   alt="Descripción de la imagen"
                   width={500}
@@ -73,7 +78,7 @@ export default function Home() {
                 />
               </Link>
 
-              <p>entra y vive una aventura especial</p>
+              <p>Esta es la descripción de la Card 2.</p>
               <br></br>
             </motion.div>
             <motion.div className={Styles.card}
@@ -81,7 +86,7 @@ export default function Home() {
               variants={item} >
               <Link href="/2pantalla">
                 <br></br>
-                <h2>La Isla Pirata</h2>
+                <h2>Card 2</h2>
                 <motion.img src="/images/calaca.png"
                   alt="Descripción de la imagen"
                   width={400}
@@ -106,9 +111,7 @@ export default function Home() {
                 <br></br>
               </motion.div> */}
           </motion.div>
-
         </section>
-
       </main>
 
 
