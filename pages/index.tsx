@@ -2,7 +2,6 @@
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header/header'
 import Background from '../components/background/Background'
-import * as THREE from 'three'
 import Styles from '/styles/Home.module.css'
 import { motion } from "framer-motion"
 import Link from 'next/link'
