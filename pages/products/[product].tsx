@@ -9,16 +9,15 @@ const db = getFirestore(firebaseApp)
 
 
 
-export default function ProductoSimple({ producto }) {
+export default function ProductoSimple({ producto }: any) {
 
     const { query } = useRouter()
     const router = useRouter()
-
-    const deleteProduct = async () => {
-        const { product } = query
-        await deleteDoc(doc(db, 'biologia', product))
-        router.push('/')
-    }
+    // const deleteProduct = async () => {
+    //     const { product } = query
+    //     await deleteDoc(doc(db, 'materia', product))
+    //     router.push('/')
+    // }
 
     return (
         <div>
@@ -40,7 +39,7 @@ export default function ProductoSimple({ producto }) {
     )
 }
 
-export async function getServerSideProps({ query: { product } }) {
+export async function getServerSideProps({ query: { product } }: any) {
     const docRef = doc(db, 'biologia', product)
     const docSnap = await getDoc(docRef)
     const producto = docSnap.data()
