@@ -57,11 +57,12 @@ export default function Home({ materias }: any) {
         <section>
           <motion.div className={Styles.cardcontainer}>
             {materias.map((materia: any) => (
-              <motion.div className={Styles.card}
+              
+              <motion.div key={materia.id} className={Styles.card}
                 variants={item} >
                 <Link href="/2pantalla">
                   <br></br>
-                  <h2>{materia.nombre}</h2>
+                  <h2 >{materia.nombre}</h2>
                   <motion.img src={materia.imagen}
                     alt="Descripción de la imagen"
                     width={400}
