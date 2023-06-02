@@ -9,7 +9,7 @@ const Header = () => {
         <div className={styles.circlecontainer}>
           <div className={styles.circle}></div>
           <div className={styles.logo}>
-            <Image src="/images/xrlab.png"
+            <Image src="/images/xrlabnew.png"
               className={styles.circleimage}
               alt="Descripción de la imagen"
               width={180}
@@ -26,7 +26,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">contactos
+            <Link href="/contactos">contactos
             </Link>
           </li>
         </ul>

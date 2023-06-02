@@ -30,6 +30,19 @@ const item = {
   show: { opacity: 1, scale: 1 }
 }
 
+export const getServerSideProps = async (context: any) => {
+  const querySnapshot = await getDocs(collection(db, 'Materias'))
+  const docs: { id: string }[] = []
+  querySnapshot.forEach((doc) => {
+    docs.push({ ...doc.data(), id: doc.id })
+  })
+
+  return {
+    props: {
+      materias: docs
+    }
+  }
+}
 
 export default function Home({ materias }: any) {
   return (
@@ -60,7 +73,7 @@ export default function Home({ materias }: any) {
               
               <motion.div key={materia.id} className={Styles.card}
                 variants={item} >
-                <Link href="/2pantalla">
+                <Link href={`api/users/${materia.nombre}`}>
                   <br></br>
                   <h2 >{materia.nombre}</h2>
                   <motion.img src={materia.imagen}
@@ -82,16 +95,3 @@ export default function Home({ materias }: any) {
 
 
 };
-export const getServerSideProps = async (context: any) => {
-  const querySnapshot = await getDocs(collection(db, 'Materias'))
-  const docs: { id: string }[] = []
-  querySnapshot.forEach((doc) => {
-    docs.push({ ...doc.data(), id: doc.id })
-  })
-
-  return {
-    props: {
-      materias: docs
-    }
-  }
-}

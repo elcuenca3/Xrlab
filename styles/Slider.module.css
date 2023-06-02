@@ -1,0 +1,6 @@
+/* Slider.module.css */
+.carouselContainer {
+    max-width: 600px; /* Establece el ancho máximo del carousel */
+    margin: 0 auto; /* Centra el carousel horizontalmente */
+  }
+  

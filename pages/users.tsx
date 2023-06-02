@@ -32,7 +32,7 @@ export default function Formulario() {
         e.preventDefault();
         //console.log(dato);
         try {
-            await addDoc(collection(db, 'Materia'), {
+            await addDoc(collection(db, 'users'), {
                 ...dato
             })
         } catch (error) {
@@ -62,7 +62,7 @@ export default function Formulario() {
                         </div>
                         <div>
                             <input type="text" placeholder='ingresar Link de imagen'
-                                name='descripción' value={dato.imagen} onChange={obtenerInputs} required />
+                                name='imagen' value={dato.imagen} onChange={obtenerInputs} required />
                         </div>
                         {/* 
                             <div className='form-group'>

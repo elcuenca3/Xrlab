@@ -2,6 +2,7 @@
   display: flex;
   margin: 50px;
   background-color: #3535353f;
+  border-radius: 5px;
 }
 
 .menu {
@@ -9,7 +10,6 @@
   align-items: center;
   margin: 20px;
   margin-left: 100px;
-  
 
 }
 .menu > li {
@@ -27,16 +27,12 @@
 } */
 
 .menu > li:hover {
-  background-color: rgb(0, 34, 97);
+  background-color: rgb(197, 39, 245);
   border-radius: 5px;
   color: rgb(255, 255, 255);
-  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: cubic-bezier(0.6, 0.45,3, 0.335);
 }
 
-.logo {
-  display: inline-flex;
-  padding: 0px 60px;
-}
 
 .circlecontainer {
   position: relative;
@@ -49,19 +45,18 @@
   top: 0;
   left: 0;
   width: 90%;
-  height:90%;
-  border-radius: 50%;
+  height:100%;
+  border-radius: 3%;
   background-color: #f1c40f; /* Cambia el color de fondo del círculo según tus necesidades */
 }
 
 .circleimage {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 45%;
   transform: translate(-50%, -50%);
   width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: 100px; /* Ajusta la altura de la imagen según tus necesidades */
-  border-radius: 50%;
+  height: 105px; /* Ajusta la altura de la imagen según tus necesidades */
   overflow: hidden;
   object-fit: cover;
 }

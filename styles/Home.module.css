@@ -12,7 +12,11 @@
 
   overflow: hidden;
 }
+.card > h2 {
+  font: oblique bold 120% cursive;
+}
 .cardcontainer > h2 {
+    font: oblique bold 120% cursive;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -35,10 +39,11 @@
   margin-top: 45px;
   text-align: center;
   transition: all 0.25s;
-  background-color: rgba(214, 126, 226, 0.534);
+  background-color: rgba(97, 126, 206, 0.534);
   padding: auto;
   display: grid;
   grid-gap: 1rem;
+  font: oblique bold 120% cursive;
 }
 
 .image {

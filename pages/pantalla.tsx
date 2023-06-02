@@ -28,6 +28,7 @@ export default function Home() {
       <div className={Styles.container}>
 
         <h1>hola que tal Bienvenido </h1>
+        
 
         <div className={Styles.cuerpo}>
 
