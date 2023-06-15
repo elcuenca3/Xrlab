@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.4",
+    "@chakra-ui/react": "^2.7.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
@@ -20,7 +24,7 @@
     "express": "^4.18.2",
     "firebase": "^9.22.0",
     "firebase-admin": "^11.9.0",
-    "framer-motion": "^10.11.6",
+    "framer-motion": "^10.12.16",
     "next": "13.3.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
