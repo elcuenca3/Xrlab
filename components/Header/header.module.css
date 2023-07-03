@@ -47,7 +47,7 @@
   width: 90%;
   height:100%;
   border-radius: 3%;
-  background-color: #f1c40f; /* Cambia el color de fondo del círculo según tus necesidades */
+  background-color: #f1c40f00; /* Cambia el color de fondo del círculo según tus necesidades */
 }
 
 .circleimage {
