@@ -9,7 +9,9 @@ const db = getFirestore(firebaseApp)
 
 export default function Formulario() {
 
-    const router = useRouter()
+    const router = useRouter();
+
+
 
     const valorInicial = {
         nombre: "",
@@ -21,14 +23,14 @@ export default function Formulario() {
     const [dato, setDato] = useState(valorInicial)
 
     //capturar los inputs
-    const obtenerInputs = (e:any) => {
+    const obtenerInputs = (e: any) => {
         const { name, value } = e.target;
         setDato({ ...dato, [name]: value })
     }
 
 
     //esta funcion es para guardar la info en firebase
-    const enviarInfo = async (e:any) => {
+    const enviarInfo = async (e: any) => {
         e.preventDefault();
         //console.log(dato);
         try {
@@ -55,7 +57,6 @@ export default function Formulario() {
                             <input type="text" placeholder='ingresar nombre'
                                 name='nombre' value={dato.nombre} onChange={obtenerInputs} required />
                         </div>
-
                         <div>
                             <input type="text" placeholder='ingresar descripción'
                                 name='descripción' value={dato.descripción} onChange={obtenerInputs} required />

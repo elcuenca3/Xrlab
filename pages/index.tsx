@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import router, { useRouter } from 'next/router'
 
+
 //importar firebase
 import firebaseApp from '../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
@@ -44,6 +45,12 @@ export const getServerSideProps = async (context: any) => {
   }
 }
 
+
+const handleClick = () => {
+  const dato = 'Hola mundo';
+  router.push(`/paginaB?dato=${dato}`);
+};
+
 export default function Home({ materias }: any) {
   return (
     <>
@@ -66,11 +73,11 @@ export default function Home({ materias }: any) {
         <div className={Styles.containerbox}>
           <p>Bienvenido a los entornos inmersivos de Xrlab</p>
         </div>
-        
+
         <section>
           <motion.div className={Styles.cardcontainer}>
             {materias.map((materia: any) => (
-              
+
               <motion.div key={materia.id} className={Styles.card}
                 variants={item} >
                 <Link href={`api/users/${materia.nombre}`}>
@@ -80,7 +87,7 @@ export default function Home({ materias }: any) {
                     alt="Descripción de la imagen"
                     width={400}
                     height={85}
-                    layoutId="/images/calaca.png"
+                    layoutId="${materia.nombre}"
                   />
                 </Link>
                 <p>{materia.descripción}</p>
@@ -88,6 +95,9 @@ export default function Home({ materias }: any) {
               </motion.div>
             ))}
           </motion.div>
+          <div>
+            <button onClick={handleClick}>Ir a Página B</button>
+          </div>
         </section>
       </main >
     </>

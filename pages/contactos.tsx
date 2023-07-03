@@ -23,7 +23,6 @@ const Slider = ({ cards }: any) => {
                     {cards.map((card: any) => (
                         <div key={card.id}>
                             <h3>{card.nombre}</h3>
-
                             <img src={card.imagen}
                                 alt="Descripción de la imagen"
                                 width={400}
