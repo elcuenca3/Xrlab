@@ -1,5 +1,6 @@
 // pages/Slider.js
 import React from 'react';
+import Footer from '@/components/Footer/footer'
 
 import styles from '/styles/Slider.module.css';
 import Header from '@/components/Header/header'
@@ -34,6 +35,8 @@ const Slider = ({ cards }: any) => {
                     ))}
                 </Carousel>
             </div>
+            <Footer/>
+            
         </>
     );
 };

@@ -1,6 +1,30 @@
 /* Slider.module.css */
 .carouselContainer {
-    max-width: 600px; /* Establece el ancho máximo del carousel */
-    margin: 0 auto; /* Centra el carousel horizontalmente */
-  }
-  
+  max-width: 600px; /* Establece el ancho máximo del carousel */
+  margin: 0 auto; /* Centra el carousel horizontalmente */
+}
+
+.titulo {
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(49, 38, 24);
+  font-weight: bold;
+
+}
+.texto {
+  font-size: 25px;
+  text-align: justify;
+}
+.Containeranexos {
+
+  background-color: rgba(4, 14, 10, 0.123);
+  max-width: 1200px; /* Establece el ancho máximo del carousel */
+  margin: 0 auto; /* Centra el carousel horizontalmente */
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 50px;
+}

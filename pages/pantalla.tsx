@@ -1,83 +1,77 @@
-import Image from 'next/image'
+import { useRouter } from 'next/router';
+
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header/header'
-import Styles from '/styles/pantalla.module.css'
+import Styles from '/styles/Home.module.css'
 import { motion } from "framer-motion"
+import { useState } from 'react';
+import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] })
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.5
+//importar firebase
+import firebaseApp from '../firebase'
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
+import { async } from '@firebase/util'
+const db = getFirestore(firebaseApp)
+
+function obtenerMensajePredeterminado() {
+  return "Mensaje predeterminado";
+}
+
+
+function obtenerMensajeDesdeURL(router: any) {
+  const mensaje = router.query.dato || '';
+  return mensaje;
+}
+
+const DestinoPage = ({ materias }: any) => {
+  const router = useRouter();
+  const mensaje = obtenerMensajeDesdeURL(router);
+  getServerSideProps(mensaje);
+
+  return (
+    <div>
+      <h1>Página de Destino</h1>
+      <p>Dato recibido: {mensaje}</p>
+      <section>
+        
+
+
+
+        {materias.map((materia: any) => (
+          <div>
+
+          <p className={Styles.containerbox}>   {materia.nombre}</p>
+
+          <div className={Styles.cardcontainer}>
+            <div key={materia.id} className={Styles.card} >
+              <Link href={`/pantalla?dato=${materia.nombre}`}>
+                <br></br>
+                <h2 >{materia.nombre}</h2>
+              </Link>
+              <br></br>
+            </div>
+          </div>
+          </div>
+        ))}
+        <div>
+        </div>
+      </section>
+    </div>
+
+  );
+};
+
+export default DestinoPage;
+export const getServerSideProps = async (context: any) => {
+  const querySnapshot = await getDocs(collection(db, 'Materias'))
+  const docs: { id: string }[] = []
+  querySnapshot.forEach((doc) => {
+    docs.push({ ...doc.data(), id: doc.id })
+  })
+
+  return {
+    props: {
+      materias: docs
     }
   }
 }
-
-const item = {
-  hidden: { opacity: 0, scale: 0 },
-  show: { opacity: 1, scale: 1 }
-}
-
-
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <div className={Styles.container}>
-
-        <h1>hola que tal Bienvenido </h1>
-        
-
-        <div className={Styles.cuerpo}>
-
-          <motion.img src="/images/u8e8tuhh.png"
-            alt="Descripción de la imagen"
-            width={500}
-            height={50}
-            layoutId="/images/u8e8tuhh.png"
-          />
-
-          <p> La tripulación de la nave espacial se encontraba a millones de kilómetros de casa, explorando un planeta desconocido. Todo parecía tranquilo hasta que detectaron una extraña señal en el horizonte. Intrigados, decidieron investigar y se encontraron con una civilización alienígena avanzada, con tecnología que superaba todo lo que habían visto antes. ¿Serían amigos o enemigos? La tripulación debía decidir si confiar en ellos o seguir adelante en su aventura espacial.</p>
-
-        </div>
-      
-
-
-
-      </div>
-      <div className={Styles.botones}>
-          <motion.button
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              opacity: { ease: "linear" },
-              layout: { duration: 5 }
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className={Styles.boton}>
-
-
-            Sala De zoom</motion.button>
-          <motion.button layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              opacity: { ease: "backIn" },
-              layout: { duration: 5 }
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className={Styles.boton}>
-            Mas informacion</motion.button>
-
-        </div>
-
-    </>
-  );
-};

@@ -18,11 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #9e61ff;
+  background-color: #b487fd;
+  cursor: url('/public/images/calaca.png'), auto;
 }
 body {
-  background: linear-gradient(to left, #41ffe6, #f700ff);
+  background: linear-gradient(to left, #41ffe6, #fa78ff);
   animation: background-animation 10s ease infinite;
+  cursor: url('/public/images/calaca.png'), auto;
 }
 
 @keyframes background-animation {

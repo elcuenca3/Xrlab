@@ -11,14 +11,14 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 //importar firebase
-import firebaseApp from '../firebase'
+import firebaseApp from '../../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
 import { async } from '@firebase/util'
 const db = getFirestore(firebaseApp)
 
 
 
-const LitterWitch = dynamic(() => import('../components/objeto/objeto'), {
+const LitterWitch = dynamic(() => import('../../components/objeto/objeto'), {
   ssr: false,
   loading: () => <div>loading...</div>,
 });
@@ -59,7 +59,7 @@ const item = {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const querySnapshot = await getDocs(collection(db, 'Materias'))
+  const querySnapshot = await getDocs(collection(db, 'qui'))
   const docs: { id: string }[] = []
   querySnapshot.forEach((doc) => {
     docs.push({ ...doc.data(), id: doc.id })
@@ -74,7 +74,7 @@ export const getServerSideProps = async (context: any) => {
 
 
 
-export default function Home({ materias }: any) {
+export default function Matemáticas({ materias }: any) {
   const [dato, setDato] = useState('');
 
   const handleButtonClick = (newDato: any) => {
@@ -85,7 +85,7 @@ export default function Home({ materias }: any) {
       <Header />
       {/* imagenes 3d */}
       <div className={Styles.box3d}>
-        <LitterWitch />
+        {/* <LitterWitch /> */}
       </div>
       {/* <motion.div className={Styles.cardcontainer}
         variants={container}
@@ -105,13 +105,6 @@ export default function Home({ materias }: any) {
         <div className={Styles.containerbox}>
           <p>Bienvenido a los entornos inmersivos de Xrlab</p>
         </div>
-        <div className={Styles.Containeranexos}>
-          <p>El proyecto es de carácter interdisciplinario e internacional, en donde trabajarán colaborativamente las carreras de Ciencias de la Educación, Computación y Tecnologías de la Información de la UTPL; y, desde la Universidad de EAFIT, Colombia con el laboratorio MEDIALAB. El propósito es generar espacios de acompañamiento pedagógico en entornos inmersivos para los estudiantes de la universidad, que ayuden a contribuir al desempeño docente y mejorar los resultados de aprendizaje, así como también, crear entornos inmersivos gamificados para implementar refuerzos pedagógicos orientados a mejorar los niveles de aprendizaje del alumnado de las escuelas de Educación General Básica (EGB) y de colegios del Bachillerato General Unificado (BGU). </p>
-        </div>
-
-        <div className={Styles.containerbox}>
-          <p>Entornos inmersivos de Xrlab</p>
-        </div>
 
         <section>
           <motion.div className={Styles.cardcontainer}
@@ -124,16 +117,15 @@ export default function Home({ materias }: any) {
                 animate="visible"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                <Link  href={`materias/${materia.page}`}>
-                  <br></br>
-                  <h2 >{materia.nombre}</h2>
-                  <motion.img src={materia.imagen}
-                    alt="Descripción de la imagen"
-                    width={400}
-                    height={85}
-                    layoutId="${materia.nombre}"
-                  />
-                </Link>
+                <br></br>
+                <h2 >{materia.nombre}</h2>
+                <motion.img src={materia.imagen}
+                  alt="Descripción de la imagen"
+                  width={400}
+                  height={85}
+                  layoutId="${materia.nombre}"
+                />
+
                 <p>{materia.descripción}</p>
                 <br></br>
               </motion.ul>

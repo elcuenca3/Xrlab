@@ -1,0 +1,23 @@
+.footer {
+  background-color: #3b3b3b;
+  padding: 50px;
+}
+
+.imagen {
+  justify-content: center;
+  padding: 50px;
+  align-content: center;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  size: 20px;
+}
+
+/* .footer :: p{
+
+
+} */
