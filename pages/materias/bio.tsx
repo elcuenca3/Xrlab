@@ -18,7 +18,7 @@ const db = getFirestore(firebaseApp)
 
 
 
-const LitterWitch = dynamic(() => import('../../components/objeto/objeto'), {
+const LitterWitch = dynamic(() => import('../../components/objeto/LitterWitch'), {
   ssr: false,
   loading: () => <div>loading...</div>,
 });

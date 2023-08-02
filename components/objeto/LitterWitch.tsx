@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { loadGLTFModel } from '../../lib/model';
-import { BodyModel, Container, Footer, Header } from '../objeto/style';
+import { BodyModel, Container, Footer, Header } from './style';
 
 const LitterWitch: React.FC = () => {
     const refBody = useRef < HTMLDivElement > (null);
