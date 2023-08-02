@@ -1,5 +1,4 @@
 
-import { Inter } from 'next/font/google'
 import Header from '@/components/Header/header'
 import Footer from '@/components/Footer/footer'
 
@@ -13,31 +12,9 @@ import dynamic from 'next/dynamic';
 //importar firebase
 import firebaseApp from '../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
-import { async } from '@firebase/util'  
 const db = getFirestore(firebaseApp)
 
 
-
-const LitterWitch = dynamic(() => import('../components/objeto/LitterWitch'), {
-  ssr: false,
-  loading: () => <div>loading...</div>,
-});
-
-// const inter = Inter({ subsets: ['latin'] })
-// const container = {
-//   hidden: { opacity: 0 },
-//   show: {
-//     opacity: 1,
-//     transition: {
-//       delayChildren: 0.25
-//     }
-//   }
-// }
-
-// const item = {
-//   hidden: { opacity: 0, scale: 0 },
-//   show: { opacity: 1, scale: 1 }
-// }
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -84,23 +61,6 @@ export default function Home({ materias }: any) {
     <>
       <Header />
       {/* imagenes 3d */}
-      <div className={Styles.box3d}>
-        <LitterWitch />
-      </div>
-      {/* <motion.div className={Styles.cardcontainer}
-        variants={container}
-        initial="hidden"
-        animate="show">
-        <div className={Styles.box}>
-          <motion.img src="/images/xrlabnew.png"
-            alt="Descripción de la imagen"
-            width={400}
-            height={500}
-            layoutId="/images/u8e8tuhh.png"
-          />
-        </div>
-      </motion.div> */}
-
       <main>
         <div className={Styles.containerbox}>
           <p>Bienvenido a los entornos inmersivos de Xrlab</p>
