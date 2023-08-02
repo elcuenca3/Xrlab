@@ -106,7 +106,7 @@ export default function Home({ materias }: any) {
           <p>Bienvenido a los entornos inmersivos de Xrlab</p>
         </div>
         <div className={Styles.Containeranexos}>
-          <p>El proyecto es de carácter interdisciplinario e internacional, en donde trabajarán colaborativamente las carreras de Ciencias de la Educación, Computación y Tecnologías de la Información de la UTPL; y, desde la Universidad de EAFIT, Colombia con el laboratorio MEDIALAB. El propósito es generar espacios de acompañamiento pedagógico en entornos inmersivos para los estudiantes de la universidad, que ayuden a contribuir al desempeño docente y mejorar los resultados de aprendizaje, así como también, crear entornos inmersivos gamificados para implementar refuerzos pedagógicos orientados a mejorar los niveles de aprendizaje del alumnado de las escuelas de Educación General Básica (EGB) y de colegios del Bachillerato General Unificado (BGU). </p>
+          <p>El proyecto busca ofrecer refuerzos pedagógicos a estudiantes de Educación General Básica (EGB) y Bachillerato General Unificado (BGU) a través de espacios de acompañamiento en entornos inmersivos gamificados. Impulsado la necesidad de adoptar nuevas estrategias didácticas con tecnología, como la realidad virtual, que ha demostrado mejorar la comprensión y motivación en los estudiantes. El proyecto incluye varias etapas, desde la ideación hasta la capacitación y soporte para estudiantes y colegios beneficiados.</p>
         </div>
 
         <div className={Styles.containerbox}>
