@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic';
 //importar firebase
 import firebaseApp from '../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
-import { async } from '@firebase/util'
+import { async } from '@firebase/util'  
 const db = getFirestore(firebaseApp)
 
 
@@ -124,7 +124,7 @@ export default function Home({ materias }: any) {
                 animate="visible"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                <Link  href={`materias/${materia.page}`}>
+                <Link href={`materias/${materia.page}`}>
                   <br></br>
                   <h2 >{materia.nombre}</h2>
                   <motion.img src={materia.imagen}
