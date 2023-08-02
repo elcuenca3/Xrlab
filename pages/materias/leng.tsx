@@ -53,8 +53,6 @@ export const getServerSideProps = async (context: any) => {
   }
 }
 
-
-
 export default function Matemáticas({ materias }: any) {
   const [dato, setDato] = useState('');
 

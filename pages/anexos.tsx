@@ -10,18 +10,14 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 //importar firebase 
 import firebaseApp from '../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
-import { async } from '@firebase/util'
 const db = getFirestore(firebaseApp)
 
 
 
 
-const Slider = ({ cards }: any) => {
-    const { scrollYProgress } = useScroll();
+const anexos = () => {
     return (
         <>
-            <motion.div className="progress-bar"
-                style={{ scaleX: scrollYProgress }} />
             <Header />
 
             <div className={styles.container}>
@@ -104,5 +100,5 @@ const Slider = ({ cards }: any) => {
 //     }
 // }
 
-export default Slider;
+export default anexos;
 
