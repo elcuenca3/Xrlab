@@ -3,20 +3,24 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
+  padding-right: 200px;
 }
-.card > p {
+
+.card>p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 
   overflow: hidden;
 }
-.card > h2 {
+
+.card>h2 {
   font: oblique bold 120% cursive;
 }
-.cardcontainer > h2 {
-    font: oblique bold 120% cursive;
+
+.cardcontainer>h2 {
+  font: oblique bold 120% cursive;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -90,9 +94,11 @@
   0% {
     transform: rotate(45deg) translateY(0px);
   }
+
   50% {
     transform: rotate(45deg) translateY(20px);
   }
+
   100% {
     transform: rotate(45deg) translateY(0px);
   }
@@ -102,9 +108,11 @@
   0% {
     transform: rotate(65deg) translateY(0px);
   }
+
   50% {
     transform: rotate(65deg) translateY(20px);
   }
+
   100% {
     transform: rotate(65deg) translateY(0px);
   }
@@ -114,13 +122,16 @@
   0% {
     transform: rotate(45deg) translateY(0px);
   }
+
   50% {
     transform: rotate(45deg) translateY(20px);
   }
+
   100% {
     transform: rotate(45deg) translateY(0px);
   }
 }
+
 .box {
   display: grid;
   justify-content: center;
@@ -133,15 +144,22 @@
   height: 200px;
   width: 200px;
 }
+
 .containerbox {
   font-size: xx-large;
-  width: 100%; /* El cuadro ocupa todo el ancho disponible */
-  max-width: 1000px; /* El ancho máximo del cuadro es de 400 píxeles */
-  margin: 0 auto; /* Centrar el cuadro en la página */
+  width: 100%;
+  /* El cuadro ocupa todo el ancho disponible */
+  max-width: 1000px;
+  /* El ancho máximo del cuadro es de 400 píxeles */
+  margin: 0 auto;
+  /* Centrar el cuadro en la página */
   padding-top: 50px;
-  padding-bottom: 50px; /* Añadir un espacio interno de 20 píxeles */
-  box-sizing: border-box; /* Incluye el padding dentro del ancho y alto del cuadro */
-  border: 10px  #9128a7a2; /* Añadir un borde gris alrededor del cuadro */
+  padding-bottom: 50px;
+  /* Añadir un espacio interno de 20 píxeles */
+  box-sizing: border-box;
+  /* Incluye el padding dentro del ancho y alto del cuadro */
+  border: 10px #9128a7a2;
+  /* Añadir un borde gris alrededor del cuadro */
   border-radius: 30%;
   text-align: center;
   border-radius: 20%;
@@ -150,8 +168,10 @@
 .Containeranexos {
 
   background-color: rgba(4, 14, 10, 0.123);
-  max-width: 1600px; /* Establece el ancho máximo del carousel */
-  margin: 0 auto; /* Centra el carousel horizontalmente */
+  max-width: 1600px;
+  /* Establece el ancho máximo del carousel */
+  margin: 0 auto;
+  /* Centra el carousel horizontalmente */
   padding: 20px;
   border-radius: 20px;
   justify-content: center;
@@ -159,15 +179,22 @@
   text-align: justify;
   margin-right: auto;
 }
+
 .box3d {
   font-size: xx-large;
-  width: 100%; /* El cuadro ocupa todo el ancho disponible */
-  max-width: 1000px; /* El ancho máximo del cuadro es de 400 píxeles */
-  margin: 0 auto; /* Centrar el cuadro en la página */
+  width: 100%;
+  /* El cuadro ocupa todo el ancho disponible */
+  max-width: 1000px;
+  /* El ancho máximo del cuadro es de 400 píxeles */
+  margin: 0 auto;
+  /* Centrar el cuadro en la página */
   padding-top: 50px;
-  padding-bottom: 50px; /* Añadir un espacio interno de 20 píxeles */
-  box-sizing: border-box; /* Incluye el padding dentro del ancho y alto del cuadro */
-  border: 10px  #9128a7a2; /* Añadir un borde gris alrededor del cuadro */
+  padding-bottom: 50px;
+  /* Añadir un espacio interno de 20 píxeles */
+  box-sizing: border-box;
+  /* Incluye el padding dentro del ancho y alto del cuadro */
+  border: 10px #9128a7a2;
+  /* Añadir un borde gris alrededor del cuadro */
   border-radius: 30%;
   text-align: center;
   border-radius: 20%;

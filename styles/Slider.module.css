@@ -3,6 +3,11 @@
   max-width: 600px; /* Establece el ancho máximo del carousel */
   margin: 0 auto; /* Centra el carousel horizontalmente */
 }
+.carouselContainer>p{
+  padding: 50px;
+  font-size: 50px;
+
+}
 
 .titulo {
   font-size: 30px;
@@ -27,4 +32,20 @@
   padding: 20px;
   border-radius: 20px;
   padding-bottom: 50px;
+}
+
+.informacion_adicional {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.carga:hover .informacion_adicional {
+  display: block;
+}
+.carga {
+  position: relative;
 }

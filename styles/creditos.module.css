@@ -1,0 +1,125 @@
+.continerslider {
+    overflow: hidden;
+    /* Para contener los elementos flotantes */
+}
+
+.card>h3 {
+    justify-items: center;
+    align-items: center;
+
+}
+
+.containerbox {
+    font-size: xx-large;
+    width: 100%;
+    /* El cuadro ocupa todo el ancho disponible */
+    max-width: 1000px;
+    /* El ancho máximo del cuadro es de 400 píxeles */
+    margin: 0 auto;
+    /* Centrar el cuadro en la página */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* Añadir un espacio interno de 20 píxeles */
+    box-sizing: border-box;
+    /* Incluye el padding dentro del ancho y alto del cuadro */
+    border: 10px #9128a7a2;
+    /* Añadir un borde gris alrededor del cuadro */
+    border-radius: 30%;
+    text-align: center;
+    border-radius: 20%;
+}
+
+.card {
+    position: relative;
+    min-width: 100%;
+    width: 750px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(76, 0, 255, 0.548);
+    margin-left: 110px;
+    margin-top: 45px;
+    background-color: rgba(175, 196, 255, 0.438);
+    font: oblique bold 120% cursive;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Divide el espacio en dos columnas, la primera del tamaño de su contenido (la imagen) y la segunda que ocupa el espacio restante */
+    align-items: center;
+    /* Alinea verticalmente el contenido */
+    grid-gap: 20px;
+    /* Espacio entre la imagen y el texto */
+
+}
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas más pequeñas */
+        text-align: center;
+        /* Centrar el contenido en pantallas más pequeñas */
+    }
+}
+
+.image {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.colum {
+    width: 50%;
+    /* Divide el espacio en dos columnas iguales */
+    float: left;
+    /* Hace que los elementos floten a la izquierda */
+    box-sizing: border-box;
+    /* Incluye el padding y el borde dentro del ancho especificado */
+    padding: 10px;
+
+}
+
+.imagelogo {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+
+}
+
+.nombre {
+    position: absolute;
+    justify-items: center;
+    bottom: 5%;
+    left: 18%;
+    background-color: rgba(255, 255, 255, 0.336);
+    padding: 1%;
+    border-radius: 20%;
+    color: rgb(109, 60, 0);
+}
+
+.text {
+    justify-items: center;
+    width: 80%;
+    height: 40%;
+    color: rgb(109, 60, 0);
+}
+
+
+.carga {
+    position: relative;
+}
+
+.informacion_adicional {
+    display: none;
+    position: absolute;
+    top: -100%;
+    /* Mover hacia arriba para superponerse */
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    /* Asegurarse de que se muestre encima del .carga */
+}
+
+.carga:hover .informacion_adicional {
+    display: block;
+}

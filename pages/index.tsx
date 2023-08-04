@@ -83,7 +83,7 @@ export default function Home({ materias }: any) {
                 initial="hidden"
                 animate="visible"
                 whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                transition={{ type: "spring", stiffness: 500, damping: 10 }}>
                 <Link href={`materias/${materia.page}`}>
                   <br></br>
                   <h2 >{materia.nombre}</h2>

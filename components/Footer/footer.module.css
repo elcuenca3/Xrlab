@@ -1,11 +1,12 @@
 .footer {
   background-color: #3b3b3b;
-  padding: 50px;
+  padding: 20px;
+  margin-top: 10%;
 }
 
 .imagen {
   justify-content: center;
-  padding: 50px;
+  padding: 25px;
   align-content: center;
 }
 

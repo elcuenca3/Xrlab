@@ -18,6 +18,7 @@ const Slider = ({ cards }: any) => {
     return (
         <>
             <Header />
+            <div className={styles.carga}>
             <div className={styles.carouselContainer}>
 
                 <Carousel>
@@ -29,11 +30,15 @@ const Slider = ({ cards }: any) => {
                                 width={400}
                                 height={85}
                             />
+                            <div className={styles.informacion_adicional}>
                             <p>{card.descripción}</p>
+
+                            </div>
                             {/* Agrega aquí el contenido adicional de la tarjeta */}
                         </div>
                     ))}
                 </Carousel>
+            </div>
             </div>
             <Footer/>
             
