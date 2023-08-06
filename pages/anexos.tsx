@@ -1,7 +1,7 @@
 // pages/Slider.js
 import React from 'react';
 import Footer from '@/components/Footer/footer'
-import { motion, useScroll } from "framer-motion"
+import { motion } from "framer-motion"
 
 import styles from '/styles/Anexos.module.css';
 import Header from '@/components/Header/header'
@@ -24,7 +24,6 @@ const anexos = () => {
             <div className={styles.todo}>
                 <div>
                     <Header />
-
                     {/* Contenido de la Sección 2 */}
                     <motion.div initial={{ scale: 0 }}
                         animate={{ rotate: 360, scale: 1 }}
@@ -176,6 +175,8 @@ const anexos = () => {
 
                         {/* </motion.div> */}
                     </div>
+                <SmoothScrollLinks />
+                    
                 </motion.div>
 
 
