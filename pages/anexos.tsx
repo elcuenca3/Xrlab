@@ -1,7 +1,7 @@
 // pages/Slider.js
 import React from 'react';
 import Footer from '@/components/Footer/footer'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 import styles from '/styles/Anexos.module.css';
 import Header from '@/components/Header/header'
@@ -28,18 +28,18 @@ const anexos = () => {
                     <motion.div initial={{ scale: 0 }}
                         animate={{ rotate: 360, scale: 1 }}
                         transition={{
-                            type: "spring",
+                            type: 'spring',
                             stiffness: 260,
                             damping: 25
                         }}>
-                        <div id="Titulo" className={styles.section}>
+                        <div id='Titulo' className={styles.section}>
                             {/* Contenido de la Sección 1 */}
                             <h2>
                                 Pagina interactiva con three js
                             </h2>
                             <Image
-                                src="/images/calaca.png"
-                                alt="Descripción de la imagen"
+                                src='/images/calaca.png'
+                                alt='Descripción de la imagen'
                                 width={450}
                                 height={85}
                             />
@@ -52,14 +52,12 @@ const anexos = () => {
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 20
                     }}>
-                    <div id="Resumen" className={styles.section}>
-
+                    <div id='Resumen' className={styles.section}>
                         <h2 >Resumen del Proyecto </h2>
-
                         <p>El proyecto es de carácter interdisciplinario e internacional,
                             en donde trabajarán colaborativamente las carreras de Ciencias de la Educación,
                             Computación y Tecnologías de la Información de la UTPL;
@@ -76,16 +74,16 @@ const anexos = () => {
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 25
                     }}>
-                    <div id="Introducción" className={styles.section}>
+                    <div id='Introducción' className={styles.section}>
                         {/* Contenido de la Sección 2 */}
                         {/* <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 20
                     }}> */}
@@ -116,13 +114,13 @@ const anexos = () => {
                             General Unificado (BGU) en las asignaturas de Lengua y literatura, Matemática, Física, Química y Biología; de este modo,
                             no solo se contribuye al ODS 4 (garantizar una educación inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje
                             durante toda la vida para todos' y tiene siete metas y tres medios de ejecución), sino también ,el espíritu de trabajo en equipo como
-                            valor de la UTPL y esencialmente a su misión "Buscar la verdad y formar personas, a través de la ciencia, para servir a la sociedad".
+                            valor de la UTPL y esencialmente a su misión 'Buscar la verdad y formar personas, a través de la ciencia, para servir a la sociedad'.
                             Es importante mencionar que los entornos inmersivos serán mejorados ciclo a ciclo en función de los requerimientos de los refuerzos pedagógicos,
                             aspecto que permiten la transformación de los espacios para la enseñanza aprendizaje. </p>
                         {/* <Image
 
-                    src="/images/calaca.png"
-                    alt="Descripción de la imagen"
+                    src='/images/calaca.png'
+                    alt='Descripción de la imagen'
                     width={350}
                     height={85}
                 /> */}
@@ -134,17 +132,17 @@ const anexos = () => {
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 25
                     }}>
-                    <div id="Objetivos" className={styles.section}>
+                    <div id='Objetivos' className={styles.section}>
                         {/* Contenido de la Sección 3 */}
 
                         {/* <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 20
                     }}> */}
@@ -156,13 +154,13 @@ const anexos = () => {
                     </div>
 
 
-                    <div id="Objetivos" className={styles.section}>
+                    <div id='Objetivos' className={styles.section}>
                         {/* Contenido de la Sección 3 */}
 
                         {/* <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 260,
                         damping: 20
                     }}> */}
