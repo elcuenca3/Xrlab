@@ -29,49 +29,49 @@ function Slider({ cards }: SliderProps) {
     return (
         <>
             <Header />
+            <main className={styles.boxmain}>
+                <h2 className={styles.containerbox}>Creditos de entornos </h2>
+                <div className={styles.continerslider}>
+                    <Swiper
+                        spaceBetween={50}
+                        slidesPerView={2}
+                        navigation
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 3000 }}
+                    >
+                        {cards.map((card) => (
+                            <SwiperSlide key={card.id}>
+                                <div className={styles.colum}>
+                                    <div className={styles.card}>
+                                        {/* <div className={styles.colum}> */}
+                                        {/* </div> */}
+                                        <div className={styles.image}>
 
-            <h2 className={styles.containerbox}>Creditos de entornos </h2>
-            <div className={styles.continerslider}>
-                <Swiper
-                    spaceBetween={50}
-                    slidesPerView={2}
-                    navigation
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 3000 }}
-                >
-                    {cards.map((card) => (
-                        <SwiperSlide key={card.id}>
-                            <div className={styles.colum}>
-                                <div className={styles.card}>
-                                    {/* <div className={styles.colum}> */}
-                                    {/* </div> */}
-                                    <div className={styles.image}>
+                                            <Image
+                                                src={card.imagen}
+                                                alt="Descripción de la imagen"
+                                                width={350}
+                                                height={85}
+                                            />
+                                        </div>
+                                        <p className={styles.text}>Rol: {card.descripción}</p>
+                                        <br></br>
+                                        <h3 className={styles.nombre}> {card.nombre}</h3>
 
-                                        <Image
-                                            src={card.imagen}
+                                        <motion.img src="/images/xrlabnew.png"
+                                            className={styles.imagelogo}
                                             alt="Descripción de la imagen"
-                                            width={350}
-                                            height={85}
+                                            width={100}
+                                            height={125}
                                         />
                                     </div>
-                                    <p className={styles.text}>Rol: {card.descripción}</p>
-                                    <br></br>
-                                    <h3 className={styles.nombre}> {card.nombre}</h3>
-
-                                    <motion.img src="/images/xrlabnew.png"
-                                        className={styles.imagelogo}
-
-                                        alt="Descripción de la imagen"
-                                        width={100}
-                                        height={125}
-                                    />
                                 </div>
-                            </div>
 
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </main>
             <Footer />
         </>
     );

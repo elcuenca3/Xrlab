@@ -144,7 +144,10 @@
   height: 200px;
   width: 200px;
 }
-
+.boxmain{
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
 .containerbox {
   font-size: xx-large;
   width: 100%;

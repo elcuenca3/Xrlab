@@ -1,74 +1,39 @@
-/* Slider.module.css */
-.carouselContainer {
-  max-width: 600px; /* Establece el ancho máximo del carousel */
-  margin: 0 auto; /* Centra el carousel horizontalmente */
-}
 
-.titulo {
-    font-size: 30px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    justify-content: center;
+.section{
+    height: 900px;
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: rgb(49, 38, 24);
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.527);
-    border-radius: 20px;
-    text-align: center;
-}
-.texto {
-    font-size: 25px;
-    text-align: justify;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-}
-.Containeranexos {
-    background-color: rgba(4, 14, 10, 0.123);
-    max-width: 1200px; /* Establece el ancho máximo del carousel */
-    margin: 0 auto; /* Centra el carousel horizontalmente */
-    padding: 20px;
-    border-radius: 20px;
-    padding-bottom: 50px;
-}
-.container {
-    display: flex;
-    /* flex-flow: row wrap; */
-
-}
-
-.column {
-    padding: 10px;
-    border: 1px solid rgba(99, 47, 47, 0);
-    width: 560px;
-  /*height: 560px; */
-}
-.titulomain {
-    font-size: 60px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    /* justify-content: center; */
+    justify-content: space-evenly;
+    padding: 0 40px;
     align-items: center;
-    text-align: center;
-}
-.image{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     
 }
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background: var(--red);
-    transform-origin: 0%;
-  }
-  
+/* .section:nth-child(1){
+    background-image: linear-gradient(to top,#b60082 0%,#a18cd1 100%);
+    
+} */
+
+.section>p{
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    font-size: 1vw;
+    background-color: #4600b628;
+    padding: 20px;
+    border-end-end-radius: 10%;
+    text-align: justify;
+    
+
+    
+}
+.section>h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: justify;
+
+}
+.section>image{
+    height: 60%
+
+    
+}

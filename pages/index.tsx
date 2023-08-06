@@ -1,6 +1,8 @@
 
 import Header from '@/components/Header/header'
 import Footer from '@/components/Footer/footer'
+import SmoothScrollLinks from '@/components/Loader/SmoothScrollLinks'
+
 
 import Styles from '/styles/Home.module.css'
 import { motion } from "framer-motion"
@@ -13,6 +15,7 @@ import dynamic from 'next/dynamic';
 import firebaseApp from '../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
 const db = getFirestore(firebaseApp)
+
 
 
 const container = {
@@ -61,7 +64,8 @@ export default function Home({ materias }: any) {
     <>
       <Header />
       {/* imagenes 3d */}
-      <main>
+
+      <main className={Styles.boxmain}>
         <div className={Styles.containerbox}>
           <p>Bienvenido a los entornos inmersivos de Xrlab</p>
         </div>
@@ -104,6 +108,8 @@ export default function Home({ materias }: any) {
         </section>
 
       </main >
+ 
+
       <Footer />
     </>
   );
