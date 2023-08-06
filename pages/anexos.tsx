@@ -16,15 +16,12 @@ const db = getFirestore(firebaseApp)
 
 import Image from 'next/image';
 
-
-
 const anexos = () => {
     return (
         <>
             <div className={styles.todo}>
                 <div>
                     <Header />
-                    {/* Contenido de la Sección 2 */}
                     <motion.div initial={{ scale: 0 }}
                         animate={{ rotate: 360, scale: 1 }}
                         transition={{
@@ -46,9 +43,7 @@ const anexos = () => {
                         </div>
                     </motion.div>
                 </div>
-
                 <SmoothScrollLinks />
-
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
@@ -66,10 +61,8 @@ const anexos = () => {
                             que ayuden a contribuir al desempeño docente y mejorar los resultados de aprendizaje, así como también,
                             crear entornos inmersivos gamificados para implementar refuerzos pedagógicos orientados a mejorar los niveles de
                             aprendizaje del alumnado de las escuelas de Educación General Básica (EGB) y de colegios del Bachillerato General Unificado (BGU). </p>
-
                     </div >
                 </motion.div>
-
                 <SmoothScrollLinks />
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
@@ -79,14 +72,7 @@ const anexos = () => {
                         damping: 25
                     }}>
                     <div id='Introducción' className={styles.section}>
-                        {/* Contenido de la Sección 2 */}
-                        {/* <motion.div initial={{ scale: 0 }}
-                    animate={{ rotate: 360, scale: 1 }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 260,
-                        damping: 20
-                    }}> */}
+
                         <h2 >Introducción y Justificación del Proyecto </h2>
                         <p > Producto de la pandemia COVID 19,
                             la educación en el mundo ha sufrido un gran retroceso no solo en el campo económico
@@ -117,17 +103,8 @@ const anexos = () => {
                             valor de la UTPL y esencialmente a su misión 'Buscar la verdad y formar personas, a través de la ciencia, para servir a la sociedad'.
                             Es importante mencionar que los entornos inmersivos serán mejorados ciclo a ciclo en función de los requerimientos de los refuerzos pedagógicos,
                             aspecto que permiten la transformación de los espacios para la enseñanza aprendizaje. </p>
-                        {/* <Image
-
-                    src='/images/calaca.png'
-                    alt='Descripción de la imagen'
-                    width={350}
-                    height={85}
-                /> */}
-                        {/* </motion.div> */}
                     </div>
                 </motion.div>
-
                 <SmoothScrollLinks />
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
@@ -137,66 +114,22 @@ const anexos = () => {
                         damping: 25
                     }}>
                     <div id='Objetivos' className={styles.section}>
-                        {/* Contenido de la Sección 3 */}
-
-                        {/* <motion.div initial={{ scale: 0 }}
-                    animate={{ rotate: 360, scale: 1 }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 260,
-                        damping: 20
-                    }}> */}
-
                         <h2 >Objetivo general </h2>
                         <p >Generar entornos virtuales inmersivos gamificados, para implementar refuerzos pedagógicos orientados a mejorar los niveles de aprendizaje de los estudiantes de Educación General Básica (EGB) y de Bachillerato General Unificado (BGU). </p>
-
-                        {/* </motion.div> */}
                     </div>
-
-
                     <div id='Objetivos' className={styles.section}>
-                        {/* Contenido de la Sección 3 */}
-
-                        {/* <motion.div initial={{ scale: 0 }}
-                    animate={{ rotate: 360, scale: 1 }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 260,
-                        damping: 20
-                    }}> */}
-
                         <h2 >Objetivos específicos</h2>
-
                         <p> • Capacitar a los estudiantes en la implementación y uso de entornos virtuales inmersivos para incorporarlos en procesos de enseñanza aprendizaje. </p>
                         <p> •  Conocer los niveles de satisfacción de los estudiantes del Prácticum frente a los entornos virtuales inmersivos gamificados implementados para la construcción del conocimiento en la práctica docente, que permitan mejorarlos ciclo a ciclo. </p>
-
-
-                        {/* </motion.div> */}
                     </div>
-                <SmoothScrollLinks />
-                    
+                    <SmoothScrollLinks />
+
                 </motion.div>
-
-
                 <Footer />
             </div>
         </>
     );
 };
-
-// export const getServerSideProps = async (context: any) => {
-//     const querySnapshot = await getDocs(collection(db, 'users'))
-//     const docs: {id: string }[] = []
-//     querySnapshot.forEach((doc) => {
-//         docs.push({...doc.data(), id: doc.id })
-//     })
-
-//     return {
-//         props: {
-//             cards: docs
-//         }
-//     }
-// }
 
 export default anexos;
 
