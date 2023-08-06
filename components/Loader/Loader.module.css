@@ -1,7 +1,7 @@
 .smooth_scroll_links {
   display: flex;
   justify-content: center;
-  background-color: #4600b628;
+  background-color: #4600b611;
   padding: 10px;
 }
 
@@ -10,9 +10,10 @@
   text-decoration: none;
   margin: 0 10px;
   padding: 5px;
+  font-size: 20px;
 }
 
 .smooth_scroll_links a:hover {
-  color: #ff6347;
-  border-bottom: 2px solid #ff6347;
+  color: #47eaff;
+  border-bottom: 2px solid #47fff6;
 }

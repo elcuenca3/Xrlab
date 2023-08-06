@@ -1,18 +1,18 @@
-
-.section{
+.section {
     height: 900px;
     display: flex;
     justify-content: space-evenly;
     padding: 0 40px;
     align-items: center;
-    
+
 }
+
 /* .section:nth-child(1){
     background-image: linear-gradient(to top,#b60082 0%,#a18cd1 100%);
     
 } */
 
-.section>p{
+.section>p {
     font-weight: 300;
     margin-bottom: 15px;
     margin-left: 5%;
@@ -21,19 +21,30 @@
     padding: 20px;
     border-end-end-radius: 10%;
     text-align: justify;
-    
 
-    
+
+
 }
-.section>h2{
+
+.section>h2 {
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 5px;
     text-align: justify;
 
 }
-.section>image{
-    height: 60%
 
+.section>image {
+    height: 60%
+}
+
+.todo {
+    scroll-behavior: smooth;
+}
+@media screen and ( max-width:1000px){
+    .section{
+        flex-direction : column-reverse;
+        
+    }
     
 }
