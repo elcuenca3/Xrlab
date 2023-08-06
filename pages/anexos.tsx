@@ -119,8 +119,11 @@ const anexos = () => {
                     </div>
                     <div id='Objetivos' className={styles.section}>
                         <h2 >Objetivos específicos</h2>
-                        <p> • Capacitar a los estudiantes en la implementación y uso de entornos virtuales inmersivos para incorporarlos en procesos de enseñanza aprendizaje. </p>
-                        <p> •  Conocer los niveles de satisfacción de los estudiantes del Prácticum frente a los entornos virtuales inmersivos gamificados implementados para la construcción del conocimiento en la práctica docente, que permitan mejorarlos ciclo a ciclo. </p>
+                        <p> • Capacitar a los estudiantes en la implementación y uso de
+                            entornos virtuales inmersivos para incorporarlos en procesos de enseñanza aprendizaje. </p>
+                        <p> • Conocer los niveles de satisfacción de los estudiantes del
+                            Prácticum frente a los entornos virtuales inmersivos gamificados implementados
+                            para la construcción del conocimiento en la práctica docente, que permitan mejorarlos ciclo a ciclo. </p>
                     </div>
                     <SmoothScrollLinks />
 
