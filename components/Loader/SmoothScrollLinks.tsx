@@ -1,8 +1,7 @@
-// components/SmoothScrollLinks.js
 import React from 'react';
-import styles from "../Loader/Loader.module.css"
+import styles from "../Loader/Loader.module.css";
 
-const SmoothScrollLinks = () => {
+const SmoothScrollLinks: React.FC = () => {
   return (
     <>
       <div>
@@ -11,10 +10,8 @@ const SmoothScrollLinks = () => {
           <a href="#Resumen">Resumen </a>
           <a href="#Introducción">Introducción </a>
           <a href="#Objetivos">Objetivos </a>
-
         </nav>
       </div>
-
     </>
   );
 };

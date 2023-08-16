@@ -1,7 +1,10 @@
 
 import Header from '@/components/Header/header'
 import Footer from '@/components/Footer/footer'
-import SmoothScrollLinks from '@/components/Loader/SmoothScrollLinks'
+
+import ModelViewer from "../components/model3d/ModelViewer"
+import RotatingImage from '../components/model3d/RotatingImage';
+
 
 
 import Styles from '/styles/Home.module.css'
@@ -64,6 +67,11 @@ export default function Home({ materias }: any) {
     <>
       <Header />
       {/* imagenes 3d */}
+      <div>
+        {/* <h1>Model Viewer</h1> */}
+        <ModelViewer />
+        <RotatingImage />
+      </div>
 
       <main className={Styles.boxmain}>
         <div className={Styles.containerbox}>
@@ -108,7 +116,7 @@ export default function Home({ materias }: any) {
         </section>
 
       </main >
- 
+
 
       <Footer />
     </>

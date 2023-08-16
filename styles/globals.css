@@ -16,12 +16,16 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #b487fd;
   cursor: url('/public/images/calaca.png'), auto;
 }
+
 body {
   background: linear-gradient(to left, #41ffe6, #fa78ff);
   animation: background-animation 10s ease infinite;
@@ -32,10 +36,12 @@ body {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 100% 0;
   }
 }
+
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
@@ -43,11 +49,14 @@ input[type=text] {
   box-sizing: border-box;
   color: #9e61ff;
 }
-button{
+
+button {
   background-color: white;
   color: black;
-  border: 2px solid #4CAF50; /* Green */
-  background-color: #4CAF50; /* Green */
+  border: 2px solid #4CAF50;
+  /* Green */
+  background-color: #4CAF50;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -58,6 +67,7 @@ button{
   margin: 4px 2px;
   cursor: pointer;
 }
+
 /* body {
 	background-image: url('https://images3.alphacoders.com/118/1185304.png');
 	background-size: cover;

@@ -3,6 +3,7 @@
   justify-content: center;
   background-color: #4600b611;
   padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .smooth_scroll_links a {
@@ -14,6 +15,9 @@
 }
 
 .smooth_scroll_links a:hover {
-  color: #47eaff;
+  color: #ffffff;
   border-bottom: 2px solid #47fff6;
+}
+.smooth_scroll_links:hover {
+  background-color: #ddc9fd; /* Color de fondo diferente al hacer hover */
 }
