@@ -43,7 +43,7 @@ const anexos = () => {
                         </div>
                     </motion.div>
                 </div>
-                <SmoothScrollLinks />
+    
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
@@ -63,7 +63,7 @@ const anexos = () => {
                             aprendizaje del alumnado de las escuelas de Educación General Básica (EGB) y de colegios del Bachillerato General Unificado (BGU). </p>
                     </div >
                 </motion.div>
-                <SmoothScrollLinks />
+
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
@@ -80,32 +80,10 @@ const anexos = () => {
                             comunidad educativa a reflexionar sobre la necesidad de incluir nuevas estrategias didácticas
                             con el uso de la tecnología, Bayyari y Tudoreanu (2006), sostienen que la implementación de
                             Realidad Virtual en los procesos de aprendizaje ayuda a comprender la información que reciben, así como
-                            generar mayor implicación y colaboración en los estudiantes.
-
-                            En la pandemia, la necesidad de buscar diferentes canales de comunicación,
-                            motivaron a docentes de primaria, secundaria y de universidad, a buscar nuevos espacios para
-                            el desarrollo de sus clases. En ese contexto, los espacios de práctica docente, que siempre
-                            fueron presenciales, se vieron reducidos para algunas universidades, mientras que para otras
-                            fue un espacio de innovación y de participación activa mediada por las TICs. Considerando que
-                            el retorno a clases presenciales está en marcha, esto implicaría que las prácticas sean de este
-                            mismo modo, pero en la virtualidad se observa muchas posibilidades para el desarrollo de clases
-                            de refuerzo pedagógico, donde estudiantes universitarios a través de entornos inmersivos gamificados
-                            tengan la posibilidad de poner en práctica sus conocimientos, y a la vez apoyar pedagógicamente a los niños, niñas y adolescentes
-                            en aquellas destrezas que, producto de la pandemia aún requieren ser desarrolladas.
-
-                            El presente proyecto se enmarca en trabajar interdisciplinariamente a fin de que estudiantes de Ciencias
-                            de la Educación desarrollen refuerzos pedagógicos en entornos inmersivos contextualizados, con carácter
-                            gamificado construidos por los estudiantes de Tecnologías de la Información y Computación, para que motive,
-                            dinamice y generen participación activa en los estudiantes de Educación General Básica (EGB) y de Bachillerato
-                            General Unificado (BGU) en las asignaturas de Lengua y literatura, Matemática, Física, Química y Biología; de este modo,
-                            no solo se contribuye al ODS 4 (garantizar una educación inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje
-                            durante toda la vida para todos' y tiene siete metas y tres medios de ejecución), sino también ,el espíritu de trabajo en equipo como
-                            valor de la UTPL y esencialmente a su misión 'Buscar la verdad y formar personas, a través de la ciencia, para servir a la sociedad'.
-                            Es importante mencionar que los entornos inmersivos serán mejorados ciclo a ciclo en función de los requerimientos de los refuerzos pedagógicos,
-                            aspecto que permiten la transformación de los espacios para la enseñanza aprendizaje. </p>
+                            generar mayor implicación y colaboración en los estudiantes.</p>
                     </div>
                 </motion.div>
-                <SmoothScrollLinks />
+
                 <motion.div initial={{ scale: 0 }}
                     animate={{ rotate: 360, scale: 1 }}
                     transition={{
@@ -125,9 +103,8 @@ const anexos = () => {
                             Prácticum frente a los entornos virtuales inmersivos gamificados implementados
                             para la construcción del conocimiento en la práctica docente, que permitan mejorarlos ciclo a ciclo. </p>
                     </div>
-                    <SmoothScrollLinks />
-
                 </motion.div>
+                <SmoothScrollLinks />
                 <Footer />
             </div>
         </>

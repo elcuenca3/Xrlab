@@ -1,15 +1,26 @@
 import React from 'react';
-import styles from "../Loader/Loader.module.css";
+import Link from "next/link";
+// import styles from "../Loader/Loader.module.css";
+import styles from "../Loader/prueba.module.css";
+
 
 const SmoothScrollLinks: React.FC = () => {
   return (
     <>
-      <div>
+      <div  className={styles.smooth_scroll_links_container}>
         <nav className={styles.smooth_scroll_links}>
-          <a href="#Titulo">Titulo </a>
-          <a href="#Resumen">Resumen </a>
-          <a href="#Introducción">Introducción </a>
-          <a href="#Objetivos">Objetivos </a>
+          <Link href="#Titulo">
+            <ul >Titulo </ul>
+          </Link>
+          <Link href="#Resumen">
+            <ul >Resumen </ul>
+          </Link>
+          <Link href="#Introducción">
+            <ul >Introducción </ul>
+          </Link>
+          <Link href="#Objetivos">
+            <ul >Objetivos </ul>
+          </Link>
         </nav>
       </div>
     </>

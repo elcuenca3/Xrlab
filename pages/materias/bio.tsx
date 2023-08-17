@@ -16,8 +16,6 @@ import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setD
 import { async } from '@firebase/util'
 const db = getFirestore(firebaseApp)
 
-
-
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -29,7 +27,6 @@ const container = {
     }
   }
 }
-
 const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
