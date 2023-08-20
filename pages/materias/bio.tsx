@@ -1,42 +1,141 @@
-
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header/header'
+// pages/Slider.js
+import React from 'react';
 import Footer from '@/components/Footer/footer'
-
-import Styles from '/styles/Home.module.css'
-import { motion } from "framer-motion"
-import { useState } from 'react';
-import Link from 'next/link';
-// import ThreeScene from '../pages/3d';
-import dynamic from 'next/dynamic';
-
+import { motion } from 'framer-motion'
+import styles from "../../components/Loader/prueba.module.css";
+import Header from '@/components/Header/header'
+import Image from 'next/image';
 //importar firebase
 import firebaseApp from '../../firebase'
 import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
 import { async } from '@firebase/util'
+
+import Link from "next/link";
+
 const db = getFirestore(firebaseApp)
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-}
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
+interface info {
+  id: number;
+  nombre: string;
+  imagen: string;
+  enlace: string;
 }
 
+interface SliderProps {
+  cards: info[];
+}
+
+
+const Slider = ({ cards }: SliderProps) => {
+  return (
+    <>
+      <div className={styles.todo}>
+        <div>
+          <Header />
+          <motion.div initial={{ scale: 0 }}
+            animate={{ rotate: 360, scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 25
+            }}>
+            <div id='Titulo' className={styles.section}>
+              {/* Contenido de la Sección 1 */}
+              <h2>
+                Entornos de Química y biología
+              </h2>
+              <Image
+                src='/images/biolo.png'
+                alt='Descripción de la imagen'
+                width={450}
+                height={85}
+              />
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20
+          }}>
+          <div id='Descripcion' className={styles.section}>
+            <h2 >Descripcion de los entornos  </h2>
+            <p>Aquí encontraras los entornos de aprendizaje los cuales se enfocarán en el área de química y biología,
+              disfruta de todo lo que tenamos preparado para ti.</p>
+          </div >
+        </motion.div>
+      </div>
+      <div>
+        <motion.div initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20
+          }}>
+          <div id='links' >
+
+            {cards.map((info) => (
+              <motion.div initial={{ scale: 0 }}
+                animate={{ rotate: 360, scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 260,
+                  damping: 25
+                }}>
+                <div className={styles.color}>
+
+                  <div id={`${info.nombre}`} className={styles.section}>
+                    <h2 > {info.nombre} </h2>
+                    <Image
+                      src={info.imagen}
+                      alt={info.nombre}
+                      width={450}
+                      height={85}
+                    />
+                    <Link href={info.enlace} className={styles.button}>
+                      <ul> Entorno de {info.nombre} </ul>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div >
+        </motion.div>
+      </div>
+      <Footer />
+      <div className={styles.smooth_scroll_links_container}>
+        <nav className={styles.smooth_scroll_links}>
+          <Link href="#Titulo">
+            <ul >Titulo </ul>
+          </Link>
+          <Link href="#Descripcion">
+            <ul >Descripción</ul>
+          </Link>
+          <Link href="#links">
+            <ul >Links</ul>
+          </Link>
+          {/* {cards.map((card: any) => (
+                        <Link href={`#${card.nombre}`}>
+                            <ul key={card.id} >
+                                {card.nombre}
+                            </ul>
+                        </Link>
+                    ))} */}
+        </nav>
+      </div >
+
+
+
+    </>
+  );
+};
+
 export const getServerSideProps = async (context: any) => {
-  const querySnapshot = await getDocs(collection(db, 'bio'))
+  const querySnapshot = await getDocs(collection(db, 'qui'))
   const docs: { id: string }[] = []
   querySnapshot.forEach((doc) => {
     docs.push({ ...doc.data(), id: doc.id })
@@ -44,78 +143,10 @@ export const getServerSideProps = async (context: any) => {
 
   return {
     props: {
-      materias: docs
+      cards: docs
     }
   }
 }
 
+export default Slider;
 
-
-export default function Matemáticas({ materias }: any) {
-  const [dato, setDato] = useState('');
-
-  const handleButtonClick = (newDato: any) => {
-    setDato(newDato);
-  };
-  return (
-    <>
-      <Header />
-      {/* imagenes 3d */}
-      <div className={Styles.box3d}>
-        {/* <LitterWitch /> */}
-      </div>
-      {/* <motion.div className={Styles.cardcontainer}
-        variants={container}
-        initial="hidden"
-        animate="show">
-        <div className={Styles.box}>
-          <motion.img src="/images/xrlabnew.png"
-            alt="Descripción de la imagen"
-            width={400}
-            height={500}
-            layoutId="/images/u8e8tuhh.png"
-          />
-        </div>
-      </motion.div> */}
-
-      <main>
-        <div className={Styles.containerbox}>
-          <p>Bienvenido a los entornos inmersivos de Xrlab</p>
-        </div>
-
-        <section>
-          <motion.div className={Styles.cardcontainer}
-          >
-            {materias.map((materia: any) => (
-
-              <motion.ul key={materia.id} className={Styles.card}
-                variants={container}
-                initial="hidden"
-                animate="visible"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                <br></br>
-                <h2 >{materia.nombre}</h2>
-                <motion.img src={materia.imagen}
-                  alt="Descripción de la imagen"
-                  width={400}
-                  height={85}
-                  layoutId="${materia.nombre}"
-                />
-
-                <p>{materia.descripción}</p>
-                <br></br>
-              </motion.ul>
-            ))}
-          </motion.div>
-          <div>
-          </div>
-        </section>
-
-      </main >
-      <Footer />
-    </>
-  );
-
-
-};

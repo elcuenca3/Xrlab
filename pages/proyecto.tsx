@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 import styles from '/styles/Anexos.module.css';
 import Header from '@/components/Header/header'
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import SmoothScrollLinks from '@/components/Loader/SmoothScrollLinks'
@@ -73,7 +72,7 @@ const anexos = () => {
                     }}>
                     <div id='Introducción' className={styles.section}>
 
-                        <h2 >Introducción y Justificación del Proyecto </h2>
+                        <h2 >Introducción</h2>
                         <p > Producto de la pandemia COVID 19,
                             la educación en el mundo ha sufrido un gran retroceso no solo en el campo económico
                             sino también educativo. Pedreira, Domínguez y Zubizarreta en el 2018, invitaban a la
