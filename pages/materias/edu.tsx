@@ -87,7 +87,8 @@ const Slider = ({ cards }: SliderProps) => {
                                     stiffness: 260,
                                     damping: 20
                                 }}>
-                                <div className={styles.color}>
+                                <div className={styles.color} key={info.id}>
+
 
                                     <div id={`${info.nombre}`} className={styles.section}>
                                         <h2 > {info.nombre} </h2>
