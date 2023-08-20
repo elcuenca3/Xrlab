@@ -80,14 +80,14 @@ const Slider = ({ cards }: SliderProps) => {
           <div id='links' >
 
             {cards.map((info) => (
-              <motion.div initial={{ scale: 0 }}
+              <motion.div key={info.id} initial={{ scale: 0 }}
                 animate={{ rotate: 360, scale: 1 }}
                 transition={{
                   type: 'spring',
                   stiffness: 260,
                   damping: 25
                 }}>
-                <div className={styles.color} key={info.id}>
+                <div className={styles.color} >
 
 
                   <div id={`${info.nombre}`} className={styles.section}>
